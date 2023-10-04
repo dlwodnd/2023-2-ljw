@@ -14,7 +14,7 @@ public class FlowEx28 {
             if (input > answer) {
                 System.out.println("DOWN");
             }
-            if (input < answer) {
+            else if (input < answer) {
                 System.out.println("UP");
             }
         }
