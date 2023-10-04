@@ -8,7 +8,7 @@ public class RandomValMission {
         //MIN ~ MAX나올 수 있는 랜덤 숫자를 만드는 로직을 구연하세요.
 
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 2000; i++) {
             int Val = (int) (Math.random() * (MAX - MIN + 1)) + MIN;
             System.out.println("Val : " + Val);
             if (Val < MIN || Val > MAX) {
