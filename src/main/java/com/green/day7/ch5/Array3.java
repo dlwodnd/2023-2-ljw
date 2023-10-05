@@ -8,14 +8,17 @@ public class Array3 {
         for (int i = 0; i < arr1.length; i++) {
             arr2[i] = arr1[i];
         }
-        arr2[1] = 200;
+
+        //동등성( equals ), 동일성 ( == )
+
+        arr1[1] = 200;
         System.out.println("-------------");
         for (int i = 0; i < arr1.length; i++) {
-            System.out.printf("arr1[%d] : %d\n ", i, arr1[i]);
+            System.out.printf("arr1[%d] : %d\n", i, arr1[i]);
         }
         System.out.println("-------------");
         for (int i = 0; i < arr2.length; i++) {
-            System.out.printf("arr2[%d] : %d\n ", i, arr2[i]);
+            System.out.printf("arr2[%d] : %d\n", i, arr2[i]);
         }
     }
 }
