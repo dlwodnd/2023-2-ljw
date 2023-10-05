@@ -13,8 +13,7 @@ public class FlowEx28 {
             input = scan.nextInt();
             if (input > answer) {
                 System.out.println("DOWN");
-            }
-            else if (input < answer) {
+            } else if (input < answer) {
                 System.out.println("UP");
             }
         }
