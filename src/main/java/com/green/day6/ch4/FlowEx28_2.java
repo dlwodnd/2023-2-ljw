@@ -16,6 +16,7 @@ public class FlowEx28_2 {
             }
             System.out.println(input < answer ? "UP" : "DOWN");
         }
+        System.out.println(input);
         System.out.println("끝!!");
     }
 }
