@@ -9,6 +9,5 @@ public class ArrayEx5 {
         }
         int avr = total / score.length;
         System.out.printf("총점 = %d , 평균 = %d", total, avr);
-
     }
 }
