@@ -22,7 +22,8 @@ public class ArrayToStringMissonResult {
             System.out.print( i < x ? arr[i] + ", " : arr[i]);
         }
         System.out.println("]");
-        System.out.println("----------------------------------");
+        System.out.println("-----------------");
+
 
     }
 }
