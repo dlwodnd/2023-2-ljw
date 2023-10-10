@@ -7,10 +7,10 @@ public class ArrayEx6Result {
         int max = score[0];
         //score 안에서 min값과 max값을 구해주세요
         for (int i = 0; i < score.length; i++) {
-            if(max < score[i]){
+            if (max < score[i]) {
                 max = score[i];
             }
-            if(min > score[i]){
+            if (min > score[i]) {
                 min = score[i];
             }
         }
