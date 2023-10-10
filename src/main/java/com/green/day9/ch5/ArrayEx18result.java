@@ -12,9 +12,28 @@ public class ArrayEx18result {
         for (int i = 0; i < score.length; i++) {
             int[] arr = score[i];
             for (int j = 0; j < arr.length; j++) {
-                int x = arr[j];
+                //int x = arr[j];
+                int val = score[i][j];
                 System.out.printf("score[%d][%d] = %d\n", i, j, arr[j]);
-                sum += x;
+            }
+        }
+        System.out.println("sum : " + sum);
+        System.out.println("====================");
+        //향상된 for 문으로 sum 값을 구하는법.
+
+        for(int[]arr : score) {
+        /*for (int i = 0; i < score.length; i++) {
+            int[] arr = score[i];}
+            와 같은 식
+            */
+            for (int val : arr){
+            /*
+            for (int j = 0; j < arr.length; j++) {
+                int val = score[i][j];
+                }
+                와 같은 식
+             */
+                sum += val;
             }
         }
         System.out.println("sum : " + sum);
