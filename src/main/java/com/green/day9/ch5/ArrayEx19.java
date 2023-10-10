@@ -37,5 +37,6 @@ public class ArrayEx19 {
             }
             System.out.printf("%d\t",sum);
         }
+        System.out.println(Arrays.toString(x));
     }
 }
