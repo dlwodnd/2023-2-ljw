@@ -13,7 +13,7 @@ public class ArrayEx12 {
         names [1] = "Woo";
         System.out.println(Arrays.toString(names));
 
-        for(String str : names){ //foreach문(index문 사용불가)
+        for(String str : names){ //foreach문(index 사용불가)
             System.out.println(str);
         }
         System.out.println("========================");

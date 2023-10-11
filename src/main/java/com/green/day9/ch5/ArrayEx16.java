@@ -14,12 +14,11 @@ public class ArrayEx16 {
         */
         Scanner scan = new Scanner(System.in);
         String[] name = new String[3];
-            for (int i = 0; i < name.length; i++) {
-                System.out.println("문자열");
-                String x = scan.nextLine();
-                name[i] = x;
-            }
-        for(String strArr : name){
+        for (int i = 0; i < name.length; i++) {
+            String x = scan.nextLine();
+            name[i] = x;
+        }
+        for (String strArr : name) {
             System.out.println(strArr);
         }
         System.out.println(Arrays.toString(name));

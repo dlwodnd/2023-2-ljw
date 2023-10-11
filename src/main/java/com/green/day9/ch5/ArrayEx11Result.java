@@ -15,10 +15,11 @@ public class ArrayEx11Result {
             numArr[i] = random;
         }
         System.out.println(Arrays.toString(numArr));
-        for (int val : numArr){
+        for (int val : numArr) {
             cntArr[val]++;
         }
-        /*for (int i = 0; i < LEN; i++) {
+        /*
+        for (int i = 0; i < LEN; i++) {
             int val = numArr[i];
             cntArr[val]++;
         }

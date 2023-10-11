@@ -21,12 +21,12 @@ public class ArrayEx18result {
         System.out.println("====================");
         //향상된 for 문으로 sum 값을 구하는법.
 
-        for(int[]arr : score) {
+        for (int[] arr : score) {
         /*for (int i = 0; i < score.length; i++) {
             int[] arr = score[i];}
             와 같은 식
             */
-            for (int val : arr){
+            for (int val : arr) {
             /*
             for (int j = 0; j < arr.length; j++) {
                 int val = score[i][j];
