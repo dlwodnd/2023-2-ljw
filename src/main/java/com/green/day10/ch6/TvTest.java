@@ -12,7 +12,7 @@ public class TvTest {
         Tv tv1 = new Tv();//new는 클래스를 객체화 시키는것.
         //대문자로 시작하는 타입은 래퍼런스 타입
         //래퍼런스 타입은 주소값(객체, 배열의 주소값)만 입력 가능하다.
-        //Tv tv1 은 변수 선언이다.
+        //Tv tv1은 Tv클래스의 주소값을 사용하기위한 변수선언이다.
         tv1.channel = 10;
         tv1.color = "빨강";
         tv1.power = true;

@@ -15,4 +15,6 @@ public class NumberBox {
     void abs(int n1) {
         System.out.println(n1 < 0 ? -n1 : n1);
     }
+    //모든 메소드는 return이라는 키워드를 만나야 한다.
+    //보통은 return은 생략되어 실행된다.
 }
