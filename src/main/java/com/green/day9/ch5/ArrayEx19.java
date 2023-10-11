@@ -29,6 +29,7 @@ public class ArrayEx19 {
             System.out.printf("%d\t%.1f\t",x[i],avg);
             System.out.println();
         }
+        System.out.println("==========================");
         System.out.print("총점\t");
         for (int i = 0 ; i< score[0].length ; i++){
             int sum = 0;
@@ -37,6 +38,6 @@ public class ArrayEx19 {
             }
             System.out.printf("%d\t",sum);
         }
-        System.out.println(Arrays.toString(x));
+
     }
 }
