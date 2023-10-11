@@ -19,6 +19,8 @@ public class MultiArrEx4Result2 {
                 continue;
             }
             System.out.println("정답입니다.");
+            //객체는 속성과 메소드로 나누어 진다.
+            //속성은 명사 메소드는 동사이다.
 
 
         }
