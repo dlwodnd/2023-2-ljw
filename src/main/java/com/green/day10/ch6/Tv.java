@@ -4,6 +4,7 @@ public class Tv {
     String color;
     boolean power;
     int channel;
+    //전역변수
     //속성, 멤버필드, property
 
 
