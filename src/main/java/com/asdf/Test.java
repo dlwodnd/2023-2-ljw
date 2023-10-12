@@ -4,19 +4,19 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        int[] x = new int[10];
-        for (int i = 0; i < x.length; i++) {
-            x[i] = i;
-        }
-        int a = 0;
-        int b = 0;
-        do{
-            for(int i = 0 ; i <x.length ; i++ ){
-                for(int j = 0 ; j < x.length ; j++){
-
+        int[] x = {24,32,21,42,7,2,65,22};
+        for (int i = 0 ; i < x.length ; i++){
+            for (int j = i + 1 ; j < x.length ; j++){
+                if (x[i] > x[j]){
+                    int num = x[i];
+                    x[i] = x[j];
+                    x[j] = num;
                 }
             }
-        }while (a!=0 && b!=0);
+        }
+        System.out.println(Arrays.toString(x));
+
+
 
 
     }
