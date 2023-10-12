@@ -33,6 +33,7 @@ public class MethodExam2 {
                 grade = "C";
         }
         return grade + x;
-
+        //String x = String.format()
+        //printf를 스트링 타입으로 만들 수 있다.
     }
 }
