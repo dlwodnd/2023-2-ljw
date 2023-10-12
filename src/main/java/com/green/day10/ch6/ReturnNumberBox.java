@@ -7,7 +7,7 @@ public class ReturnNumberBox {
         //void가 있으면 return을 하지 않아도 된다.
     }
     int abs(int n1){
-        return (n1 < 0 ? -n1 : n1);
+        return n1 < 0 ? -n1 : n1;
         /*if(n1 < 0){
             return -n;
         } 위의 식과 동일
