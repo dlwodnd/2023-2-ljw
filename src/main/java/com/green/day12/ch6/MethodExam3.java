@@ -35,5 +35,7 @@ public class MethodExam3 {
         int sum2 = x.sumTest2("123");
         System.out.println(sum);
         System.out.println(sum2);
+        System.out.println("=========================================");
+
     }
 }
