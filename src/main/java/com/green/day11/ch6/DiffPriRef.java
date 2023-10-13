@@ -8,11 +8,16 @@ public class DiffPriRef {
         System.out.println("main : " + num);
         System.out.println("==================");
         NumBox box = new NumBox();
-        box.num = 20;
+        box.num = 10;
+        NumBox box2 = copyObj(box);
         changeVal(box);
         System.out.println(box.num);
 
 
+    }
+    public static NumBox copyObj(NumBox n1){
+        n1.num = 10;
+        return n1;
     }
 
     public static void changeVal(int n1) {
@@ -27,8 +32,8 @@ public class DiffPriRef {
 
     public static void changeVal(NumBox dd) {
         System.out.println("changeVal - NumBox");
-        dd.num = 10;
         dd = new NumBox();
+        dd.num = 10;
     }
 }
 
