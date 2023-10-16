@@ -11,8 +11,8 @@ public class CardTest2 {
     }
 
     public static Card[] makecard() {
-        String [] x = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
-        Card [] num = new Card[52];
+        String[] x = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+        Card[] num = new Card[52];
         Card spa = new Card();
 
 
