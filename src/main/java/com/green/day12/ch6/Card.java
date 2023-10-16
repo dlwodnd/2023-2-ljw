@@ -23,7 +23,6 @@ public class Card {
     }
 
     public void printYourSelf() {
-        CardTest2Rsult.makecard();
         System.out.printf("%s (%s)\n",kind, number);
     }
 }
