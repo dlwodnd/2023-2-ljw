@@ -4,19 +4,17 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        int[] x = {24,32,21,42,7,2,65,22};
-        for (int i = 0 ; i < x.length ; i++){
-            for (int j = i + 1 ; j < x.length ; j++){
-                if (x[i] > x[j]){
-                    int num = x[i];
-                    x[i] = x[j];
-                    x[j] = num;
+        int[] sides = {3, 6, 5};
+        for (int i = 0; i < sides.length - 1; i++) {
+            for (int j = i + 1; j < sides.length; j++) {
+                if (sides[j] > sides[i]) {
+                    int max = sides[j];
+                    sides[j] = sides[i];
+                    sides[i] = max;
                 }
             }
         }
-        System.out.println(Arrays.toString(x));
-
-
+        System.out.println(Arrays.toString(sides));
 
 
     }

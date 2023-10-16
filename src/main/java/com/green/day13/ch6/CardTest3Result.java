@@ -1,10 +1,6 @@
 package com.green.day13.ch6;
 
-import com.green.day4.ch4.Switch;
-
-import java.util.Arrays;
-
-class Card {
+class Card2 {
     String pattern;
     String denomination;
     public void printYourSelf(){
@@ -12,39 +8,36 @@ class Card {
     }
 }
 
-public class CardTest3 {
+public class CardTest3Result {
     public static void main(String[] args) {
 
-        Card [] cards = makeCards();
-        for (Card x : cards){
+        Card2 [] cards = makeCards();
+        for (Card2 x : cards){
             x.printYourSelf();
         }
     }
-    public static Card[] makeCards(){
-        Card[] cArray = new Card[52];
+    public static Card2[] makeCards(){
+        Card2[] cArray = new Card2[52];
         String [] pattern ={"Spade","Daiamond","Heart","Club"};
-        int z = 0;
-        for (int i = 0 ; i < pattern.length ; i++){
-            for (int j = 1; j <= 13 ; j++){
-                String number = cardnum(j);
-                Card c = new Card();
-                c.denomination = number;
-                c.pattern = pattern[i];
-                cArray[z++] = c;
-            }
+        for(int i = 0 ; i < cArray.length ; i++){
+            String kind = pattern[i / 13];
+            String num = cardnum((i + 1) % 13);
+            cArray[i] = new Card2();
+            cArray[i].pattern = kind;
+            cArray[i].denomination = num;
         }
         return cArray;
     }
     public static String cardnum(int n1) {
         switch (n1) {
+            case 0:
+                return "K";
             case 1:
                 return "A";
             case 11:
                 return "J";
             case 12:
                 return "Q";
-            case 13:
-                return "K";
         }
         return String.valueOf(n1);
     }
