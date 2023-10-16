@@ -1,19 +1,30 @@
 package com.green.day12.ch6;
 
+
+import com.green.day13.ch6.CardTest2Rsult;
+
 public class Card {
-    String kind;
-    String number;
-    int getScore(){
-        switch(number){
+    public String kind;
+    //속성은 정적 담당
+    public String number;
+
+    int getScore() {//메소드는 동적담당
+        switch (number) {
             case "A":
                 return 1;
-            case"K":
+            case "K":
                 return 13;
-            case"Q":
+            case "Q":
                 return 12;
-            case"J":
+            case "J":
                 return 11;
         }
         return Integer.parseInt(number);
     }
+
+    public void printYourSelf() {
+        CardTest2Rsult.makecard();
+        System.out.printf("%s (%s)\n",kind, number);
+    }
 }
+

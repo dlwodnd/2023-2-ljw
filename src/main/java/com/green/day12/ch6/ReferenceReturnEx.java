@@ -1,7 +1,7 @@
 package com.green.day12.ch6;
 
 class Data2 {
-    int x;
+    int x ;
     double d;
 }
 

@@ -8,6 +8,7 @@ public class DiffPriRef {
         System.out.println("main : " + num);
         System.out.println("==================");
         NumBox box = new NumBox();
+        //new + 클래스는 객체주소 복사.
         box.num = 10;
         NumBox box2 = copyObj(box);
         changeVal(box);
@@ -38,5 +39,5 @@ public class DiffPriRef {
 }
 
 class NumBox {
-    int num;
+    int num ;
 }
