@@ -12,5 +12,6 @@ public class MyMathTest2 {
         num2.staticNum = 40;
         System.out.printf("num.num = %d, num.staticNum = %d\n", num.num, num.staticNum);
         System.out.printf("num.num = %d, num2.staticNum = %d\n", num.num, num2.staticNum);
+        //
     }
 }
