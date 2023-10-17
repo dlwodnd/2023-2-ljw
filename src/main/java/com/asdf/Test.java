@@ -4,22 +4,15 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        int hp = 999;
-        int answer = 0;
-        if(hp / 5 > 0){
-            answer += hp / 5;
-            hp = hp % 5;
-            System.out.printf("%d : %d\n",answer ,hp);
+        int x = 0;
+        int z = 0;
+        for(int i = 1 ; i <= 20 ; i++){
+            if ( i % 2 == 0 ){
+                x += i * i;
+                z++;
+            }
         }
-        if(hp / 3 > 0){
-            answer += hp / 3;
-            hp = hp % 3;
-            System.out.printf("%d : %d\n",answer ,hp);
-        }
-        answer += hp;
-        System.out.printf("%d : %d\n",answer ,hp);
-
-
-
+        System.out.println(x);
+        System.out.println(z);
     }
 }
