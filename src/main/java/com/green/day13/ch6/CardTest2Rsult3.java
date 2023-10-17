@@ -7,7 +7,7 @@ public class CardTest2Rsult3 {
 
         Card[] cards = makecard();
         System.out.println(cards.length);
-        for (Card c : cards){
+        for (Card c : cards) {
             c.printYourSelf();
         }
         //52개의 배열 만들기

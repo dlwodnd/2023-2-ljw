@@ -1,5 +1,7 @@
 package com.green.day14.ch6;
 
+import java.util.Arrays;
+
 public class CardDeck {
     Card[] cards;//전역변수로 호출한것
 
@@ -32,5 +34,25 @@ public class CardDeck {
                 return "K";
         }
         return String.valueOf(n1);
+    }
+
+    public void printAll() {
+        for (int i = 0; i < cards.length; i++) {
+            Card c = cards[i];
+            c.printMySelf();
+        }
+    }
+
+    public Card getCard() {
+        Card c = null;
+        while (true) {
+            int x = (int) (Math.random() * cards.length);
+            c = cards[x];
+            if (c != null){
+                cards[x]=null;
+                break;
+            }
+        }
+        return c;
     }
 }
