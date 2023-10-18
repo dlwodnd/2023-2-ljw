@@ -9,7 +9,7 @@ public class Car {
         this("white");
     }
 
-    public Car(String color) {
+    public Car(String color) {//오버로딩된 생성자.
         this(color, "auto", 4);
     }
 

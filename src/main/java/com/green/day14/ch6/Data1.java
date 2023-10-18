@@ -22,7 +22,8 @@ public class Data1 {
         //value3 = 300;
         //this.은 주소값. 과 같은 개념이다.
         //this() 생성자를 오버로딩해서 호출한다.
-        this(100,200,300);
+        this(100, 200, 300);
+        //this() 는 생성자만 호출 가능하다.
     }
 
     public void printMySelf() {

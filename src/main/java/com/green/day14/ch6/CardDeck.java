@@ -48,8 +48,8 @@ public class CardDeck {
         while (true) {
             int x = (int) (Math.random() * cards.length);
             c = cards[x];
-            if (c != null){
-                cards[x]=null;
+            if (c != null) {
+                cards[x] = null;
                 break;
             }
         }

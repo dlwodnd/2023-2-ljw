@@ -6,7 +6,8 @@ public class Car2 {
     //변수 초기화의 우선 순서는 1명시적  2초기화블럭 3생성자 순으로 되어 결과는 생성자가 지정한 값으로 나온다.
     String gearType;
     int door;
-    public Car2(String color){
+
+    public Car2(String color) {
 
     }
 
