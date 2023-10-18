@@ -1,5 +1,8 @@
 package com.green.day15.ch7;
 
+
+import com.green.day14.ch6.Car;
+
 class Card {
     static final int KIND_MAX = 4;//카드 무늬의 수.
     //상수는 한번 입력된 값이 변하지 않는 것
@@ -21,17 +24,45 @@ class Card {
         kind = c1;
         number = n1;
     }
-
-
+    @Override
+    public String toString(){
+        //String.format() = printf와 다르게 값을 출력하는 것이 아니라 값을 String 값으로 바꿔준다.
+        return "kind : " + kind + ", number : " + number;
+    }
 }
-
+class Deck{
+    final int CARD_NUM = 52;
+    Card[] cardArr = new Card[CARD_NUM];
+    int [] card = {Card.SPADE,Card.DIAMOND,Card.HEART,Card.CLUVER};
+    public Deck(){
+        int num = 0;
+        for(int i = 0 ; i < Card.KIND_MAX ; i++){
+            int kindnum = card[i];
+            for (int j = 1; j <= Card.NUM_MAX ; j++){
+                cardArr[num++] = new Card(kindnum,j);
+            }
+        }
+    }
+    public void printall(Card c){
+        System.out.printf("%d : %d\n",c.kind,c.number);
+    }
+    public Card pick(int n1){
+        return cardArr[n1];
+    }
+    public Card pick(){
+        int x = (int)(Math.random() * cardArr.length);
+        return cardArr[x];
+    }
+        }
 public class DeckTest {
     public static void main(String[] args) {
-        Card c = new Card();
-        System.out.printf("c.kind = %d, c.number = %d\n", c.kind, c.number);
-
-        Card c2 = new Card(Card.HEART, 3);
-        System.out.printf("c.kind = %d, c.number = %d\n", c2.kind, c2.number);
+        Deck deck = new Deck();
+        Card c1 = deck.pick(51);
+        deck.printall(c1);
+        System.out.printf("kind : %d ,number : %d\n",c1.kind,c1.number);
+        Card c2 = deck.pick();
+        System.out.println("============");
+        System.out.println(c2);
 
     }
 }
