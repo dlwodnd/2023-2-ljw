@@ -12,9 +12,9 @@ public class StringFunction {
         //.substring( x , y ) = 문자열을 x번째 부터 y까지 호출한다.
         //String x.contains(String y) = x 문자열에 y가 포함이 되어있는지 확인하는 작업.
         //String x.replaceAll("x", "y") = x문자열에 포함된 x 값음 y로 변환시킨다.
-        String x = "asdasd";
-        System.out.println(x.substring(0,5));
-        System.out.println(x.charAt(0));
+        int x = 123456789;
+
+
 
     }
 

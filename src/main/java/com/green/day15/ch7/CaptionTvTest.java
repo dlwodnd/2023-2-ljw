@@ -5,7 +5,7 @@ class Tv {
     int channel;
 
     void power() {
-        power = !power;
+        power = !power;//토글, 호출할 때 마다 항상 반대값을 주는 것
     }
 
     void channelUP() {
@@ -23,10 +23,10 @@ class CaptionTv extends Tv {
             System.out.println(text);
         }
     }
-    @Override//오버라이딩 하는 경우에는 이걸 입력하면 착각하지 않는다.
+    @Override//오버라이딩 에노테이션 : 오버라이딩이 정확하게 되지 않았을 경우 오류가 난다.
     void channelUP(){//오버라이딩
-        //오버라이딩을 할때는 구현부와 객체명이 동일해야한다.
-        //상위 클래스 객체를 사용하지 않고 현재 클래스의 객체를 사용하겠다.
+        //오버라이딩을 할때는 구현부와 메소드명이 동일해야한다.
+        //상위 클래스 메소드를 사용하지 않고 현재 클래스의 메소드를 사용하겠다.
         channel += 2;
     }
 }
@@ -45,5 +45,15 @@ public class CaptionTvTest {
         cTv.displayCaption("반갑다 친구들");
         cTv.caption = true;
         cTv.displayCaption("sdsadsdasds");
+        /*
+        private 같은 class 안에서만 접근가능, 멤버필드에는 private를 필수로 넣는다.
+
+        default 같은 class와 같은 pakage에서만 접근가능
+
+        protected 같은 class와 같은 pakage와 같은 상속 끼리만 접근가능
+
+        public 모든 경우 접근가능
+
+         */
     }
 }

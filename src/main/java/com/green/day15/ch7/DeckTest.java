@@ -4,6 +4,7 @@ package com.green.day15.ch7;
 import com.green.day14.ch6.Car;
 
 class Card {
+    static int pick = 0;
     static final int KIND_MAX = 4;//카드 무늬의 수.
     //상수는 한번 입력된 값이 변하지 않는 것
     //리터럴은 값 그자체
@@ -43,26 +44,31 @@ class Deck{
             }
         }
     }
-    public void printall(Card c){
-        System.out.printf("%d : %d\n",c.kind,c.number);
-    }
-    public Card pick(int n1){
-        return cardArr[n1];
+    public void printall(){
+        for (int i = 0 ; i < cardArr.length ; i++){
+            System.out.println(cardArr[i]);
+            System.out.println(i);
+        }
     }
     public Card pick(){
         int x = (int)(Math.random() * cardArr.length);
-        return cardArr[x];
+        return pick(x);
+    }
+    public Card pick(int n1 ){
+        return cardArr[n1];
+    }
+    public void shuffle(){
+        for (int i = 0 ; i < cardArr.length ; i++){
+            int x = (int)(Math.random() * cardArr.length);
+            Card c = cardArr[x];
+            cardArr[x] = cardArr[i];
+            cardArr[i] = c;
+        }
     }
         }
 public class DeckTest {
     public static void main(String[] args) {
         Deck deck = new Deck();
-        Card c1 = deck.pick(51);
-        deck.printall(c1);
-        System.out.printf("kind : %d ,number : %d\n",c1.kind,c1.number);
-        Card c2 = deck.pick();
-        System.out.println("============");
-        System.out.println(c2);
-
+        deck.shuffle();
     }
 }

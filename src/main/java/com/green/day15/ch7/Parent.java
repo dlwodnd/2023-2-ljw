@@ -18,7 +18,7 @@ class Child extends Parent {
     }
 }
 class Child2 extends Child{
-    public Child2(){
+    public Child2(){//생성자는 생성된 이후에는 사용할 수 없다.
 
     }
     void jump() {

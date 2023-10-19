@@ -5,7 +5,7 @@ public class MyMath2 {
     static int staticNum;
     //static은 다른 영역에 저장하고 static은 공간이 하나다.
     //static은 객체 생성과는 상관없다.new 를 사용하지 않아도 사용 가능하다.
-    static void print(){//static 메소드는 인스턴스 변수를 사용 할 수 없다.
+    public static void print(){//static 메소드는 인스턴스 변수를 사용 할 수 없다.
         System.out.printf("staticNum = %d\n",staticNum);
     }
     void print2(){
