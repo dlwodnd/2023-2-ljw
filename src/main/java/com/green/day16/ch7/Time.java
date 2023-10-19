@@ -3,6 +3,7 @@ package com.green.day16.ch7;
 
 public class Time {
     private int hour, minute, second;
+    //멤버필드에는 대체로 private을 해줘야 한다. 외부에서 접근해 변경하는 걸 막을 수 있기 떄문이다.
 
     //private 값을 변경하거나 넣는 방법.
     //.1 생성자
