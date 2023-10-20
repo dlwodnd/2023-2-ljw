@@ -23,7 +23,7 @@ class AnimalTest {
         //2. 자식 타입은 부모 객체 주소값 담을 수 없다.
         //Bulldog bull1 = new Dog();
 
-        //3.타입은 알고 있는 메소드만 호출 할 수 있고,
+        //3. 타입은 알고 있는 메소드만 호출 할 수 있고,
         //호출이 된다면 객체 기준이다.
         Bulldog bull3 = new Bulldog();
         bull3.jump();
@@ -54,12 +54,12 @@ class AnimalTest2 {
         callCrying(dog);
         callCrying(bulldog);
         callCrying(cat);
-
+        System.out.println(bulldog instanceof Dog);
         //Cat cat2 = (Cat)ani;
     }
     private static void callCrying(Animal ani){
         ani.crying();
-        if(ani instanceof Bulldog){
+        if(ani instanceof Bulldog){//x instanceof X = x변수가 X타입으로 형 변환 가능한지 확인 하는것.
             Bulldog bulldog = (Bulldog)ani;
             bulldog.jump();
         }

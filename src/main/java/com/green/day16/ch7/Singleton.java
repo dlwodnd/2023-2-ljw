@@ -6,6 +6,7 @@ public class Singleton {
         num++;
     }
     private static Singleton singleton;
+    //singleton 객채생성 하나로 돌려쓰는 방법. 객체생성 여러번 하지 않겠다.
     public static Singleton getInstance(){
         singleton = new Singleton();
         return singleton;

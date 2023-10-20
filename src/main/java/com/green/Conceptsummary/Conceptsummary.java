@@ -75,4 +75,5 @@ class Example2Test extends Example2{// X extends Y  = 'Y의 필드와 메소드�
         //상위 클래스 메소드를 사용하지 않고 현재 클래스의 메소드를 사용하겠다.
         channel += 2;
     }
+    int[]x = {13,7,20,19,2,10};
 }

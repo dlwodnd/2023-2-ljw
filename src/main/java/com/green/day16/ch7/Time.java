@@ -33,7 +33,7 @@ public class Time {
     }
 
     //pritave한 전역변수 값을 가져오는방법
-    public int getHour() {
+    public int getHour() {//geter메소드는 파라미터 값이 없다.
         return this.hour;
     }
 
