@@ -63,7 +63,7 @@ class Product {
     private int price;
     private int bonusPoint;
 
-    public Product(int price) {
+    public Product(int price) {//생성자는 객체 생성할 때 한번만 호출 할 수 있다.
         this.price = price;
         bonusPoint = this.price / 10;
     }

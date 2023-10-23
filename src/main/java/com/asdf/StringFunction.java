@@ -14,11 +14,17 @@ public class StringFunction {
         //.substring( x , y ) = 문자열을 x번째 부터 y까지 호출한다.
         //String x.contains(String y) = x 문자열에 y가 포함이 되어있는지 확인하는 작업.
         //String x.replaceAll("x", "y") = x문자열에 포함된 x 값음 y로 변환시킨다.
-        String x = "124578";
+        String x = "1a2s4d5f7g8";
         String[] y = x.split("");
-        for (String z : y){
-            System.out.printf(z);
+        int [] arr = new int[20];
+        int z = 0;
+        x.toCharArray();
+
+        for (int i = 0; i < x.length() ; i++){
+            arr[i] = Character.getNumericValue(x.charAt(i));
         }
+        System.out.println(Arrays.toString(arr));
+
 
 
 
