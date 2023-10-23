@@ -18,6 +18,7 @@ class NumberBaseball {
     }
     public void start(){
         setRandomNumNotDuplicate();
+        getUserInput();
     }
     private void getUserInput(){
         Scanner scan = new Scanner(System.in);
@@ -45,7 +46,7 @@ class NumberBaseball {
             }
         }
         out = GAME_COUNT - (strike + ball);
-        return false;
+        return true;
     }
     public void setRandomNumNotDuplicate(){
         for (int i = 0; i < gameNumbers.length; i++){
@@ -58,6 +59,5 @@ class NumberBaseball {
                 }
             }
         }
-        System.out.println(Arrays.toString(gameNumbers));
     }
 }
