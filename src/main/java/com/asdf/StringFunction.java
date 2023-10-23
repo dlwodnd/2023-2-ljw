@@ -19,6 +19,7 @@ public class StringFunction {
         int [] arr = new int[20];
         int z = 0;
         x.toCharArray();
+        x.charAt(0);
 
         for (int i = 0; i < x.length() ; i++){
             arr[i] = Character.getNumericValue(x.charAt(i));

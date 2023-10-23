@@ -40,11 +40,9 @@ class ArrayListTest3{
         list.add(30);
         list.add(40);
         System.out.println(list);
-        list.add(1,200);
+        list.add(5,200);
         //list의 1번방에 200을 추가하고 기존의 값들은 뒤로 한칸씩 미룬다.
         System.out.println(list);
 
-        list.remove(0);
-        System.out.println(list);
     }
 }
