@@ -31,3 +31,6 @@ class VideoPlayer extends Player{
         System.out.println("Video Play 위치 : " + pos);
     }
 }
+abstract class DvdPlayer extends Player{
+    //상위 추상클래스와 하위 클래스가 같은 추상 클래스라면 메소드를 오버드라이브 할 필요가 없다.
+}

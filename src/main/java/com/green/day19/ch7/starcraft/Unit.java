@@ -27,6 +27,8 @@ class StarcraftGame2 {
         moveAll(units, 30, 50);
 
         Unit unit1 = units.get(units.size()-1);
+        Tank tk = (Tank)unit1;
+        tk.changeMode();
     }
 
     public static void moveAll(List<Unit> units, int x, int y) {
@@ -35,6 +37,8 @@ class StarcraftGame2 {
         }
         System.out.printf("모든 유닛이 %d . %d로 이동했습니다. ", x, y);
     }
+    //인터페이스는 추상 메소드로만 이루어져 있다.
+    //추상 메소드로만 구성 되어 있어서.
 
 }
 
