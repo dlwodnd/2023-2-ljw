@@ -20,11 +20,8 @@ public class StringFunction {
         int z = 0;
         x.toCharArray();
         x.charAt(0);
-
-        for (int i = 0; i < x.length() ; i++){
-            arr[i] = Character.getNumericValue(x.charAt(i));
-        }
-        System.out.println(Arrays.toString(arr));
+        boolean b = 10 < 20;
+        System.out.println(b);
 
 
 
