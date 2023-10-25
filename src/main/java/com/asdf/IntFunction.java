@@ -1,5 +1,8 @@
 package com.asdf;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class IntFunction {
     public static void main(String[] args) {
         int num = 626331;
@@ -14,6 +17,8 @@ public class IntFunction {
             }
         }
     }
+    Map<Integer,Integer> map = new HashMap(1,2);
+
 
 }
 
