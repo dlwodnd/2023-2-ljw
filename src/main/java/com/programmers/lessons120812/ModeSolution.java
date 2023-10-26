@@ -5,7 +5,7 @@ import java.util.*;
 public class ModeSolution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int[] arr = {3,3,3,3,3,3};
+        int[] arr = {0,0,0,0,1,2,1,4,2,1,3};
         int answer =sol.solution(arr);
         Arrays.sort(arr);
         System.out.println(answer);
@@ -34,8 +34,9 @@ class Solution {
                 max = map.get(array[i]);
             }
         }
-        for (int i = 0; i < array.length; i++){
-            if (map.get(array[i]) == max){
+        int[] distinct = Arrays.stream(array).distinct().toArray();
+        for (int i = 0; i < distinct.length; i++){
+            if (map.get(distinct[i]) == max){
                 answer = array[i];
                 count++;
             }

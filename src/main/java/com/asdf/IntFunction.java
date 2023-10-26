@@ -1,23 +1,22 @@
 package com.asdf;
-
+import java.util.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class IntFunction {
     public static void main(String[] args) {
-        int num = 626331;
-        for (int i = 1; i <= 500; i++){
-            System.out.println("i"+i);
-            System.out.println("x" + num);
-            num = num % 2 == 0 ? num / 2 : num * 3 + 1;
-            System.out.println("y" + num);
-            if (num == 1){
-                System.out.println(i);
-                break;
-            }
+        int[] arr = {1,1,1,1,1,0,0,0,0,3,3,3,3,3,3};
+        Arrays.sort(arr);
+        List<Integer> listArr = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++){
+            listArr.add(arr[i]);
         }
+        System.out.println(Arrays.toString(arr));
+        System.out.println(listArr.lastIndexOf(1));
+        System.out.println(listArr.indexOf(1));
     }
-    Map<Integer,Integer> map = new HashMap(1,2);
+
 
 
 }
