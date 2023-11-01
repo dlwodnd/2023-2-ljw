@@ -23,11 +23,32 @@ public class MyConnTest {
 class MyConnTest2 {
     public static void main(String[] args) {
         BoardEntity board = new BoardEntity();
-        board.setTitle("오늘 Insert를 배움");
-        board.setCtnts("Java를 통해 Board테이블에 값 넣어봄");
-        board.setWriter("신난다");
+        board.setTitle("123");
+        board.setCtnts("123");
+        board.setWriter("123");
         BoardDao.insBoard(board);
 
 
+    }
+}
+class MyConnTest3 {
+    public static void main(String[] args) {
+        BoardEntity entity = new BoardEntity();
+        entity.setIboard(2);
+
+        int row = BoardDao.delBoard(entity);
+        System.out.println(entity.getIboard());
+    }
+}
+class MyConnTest4 {
+    public static void main(String[] args) {
+        BoardEntity entity = new BoardEntity();
+        entity.setIboard(4);
+        entity.setTitle("수정 제목2");
+        entity.setCtnts("수정 내용4");
+        entity.setWriter("작성자1");
+
+        int row = BoardDao.updBoard(entity);
+        System.out.println(row);
     }
 }
