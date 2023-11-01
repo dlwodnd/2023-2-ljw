@@ -2,7 +2,10 @@ package com.green.day24;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 //Dao = data access object
 public class BoardDao {
@@ -49,6 +52,24 @@ public class BoardDao {
             MyConn.close(con,ps);
         }
         return result;
+    }
+    public static List<BoardEntity> selBoardList(){
+        List<BoardEntity> list = new ArrayList<>();
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String sql = "SELECT iboard, title, writer, created_at " +
+                "FROM board";
+        try {
+            con = MyConn.getConn();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            MyConn.close(con,ps,rs);
+        }
+        return list;
     }
     public static int updBoard(BoardEntity entity){
         int result = 0;
