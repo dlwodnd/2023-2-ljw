@@ -24,9 +24,9 @@ public class MyConnTest {
 class MyConnTest2 {
     public static void main(String[] args) {
         BoardEntity board = new BoardEntity();
-        board.setTitle("123");
-        board.setCtnts("123");
-        board.setWriter("123");
+        board.setTitle("qwer");
+        board.setCtnts("asdf");
+        board.setWriter("zxcv");
         BoardDao.insBoard(board);
 
 

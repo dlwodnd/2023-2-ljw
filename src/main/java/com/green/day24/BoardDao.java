@@ -12,10 +12,13 @@ import java.util.List;
 public class BoardDao {
     public static int insBoard(BoardEntity entity) {
         int result = 0;
-        String sql = "INSERT INTO board" +
-                "(title,ctnts,writer)" +
+        /*String sql = "INSERT INTO board(title,ctnts,writer)" +
                 "VALUES " + "(?,?,?)";
-
+        */
+        String sql ="INSERT INTO board " +
+                        "SET title = ? " +
+                        ", ctnts =? " +
+                        ", writer = ?";
 
         System.out.println(sql);
         Connection con = null;
@@ -144,32 +147,5 @@ public class BoardDao {
         }
         return null;
     }
-    public static BoardEntity selBoardById(int iboard) {
-        Connection conn = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        String sql = " SELECT iboard, title, writer, ctnts, created_at, updated_at " +
-                " FROM board WHERE iboard = ?";
-        try {
-            conn = MyConn.getConn();
-            ps = conn.prepareStatement(sql);
-            ps.setInt(1, iboard);
-            rs = ps.executeQuery();
-            if(rs.next()) {
-                BoardEntity entity = new BoardEntity();
-                entity.setIboard(iboard);
-                entity.setTitle(rs.getString("title"));
-                entity.setCtnts(rs.getString("ctnts"));
-                entity.setWriter(rs.getString("writer"));
-                entity.setCreatedAt(rs.getString("created_at"));
-                entity.setUpdatedAt(rs.getString("updated_at"));
-                return entity;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            MyConn.close(conn, ps, rs);
-        }
-        return null;
-    }
+
 }
