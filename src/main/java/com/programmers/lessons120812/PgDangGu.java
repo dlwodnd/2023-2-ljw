@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class PgDangGu {
     public static void main(String[] args) {
-        int[][] ex = {{3, 3}, {2, 7}, {7, 3}};
-        int[] result = DangGu.solution(10, 10, 3, 7, ex);
+        int[][] ex = {{5,8}};
+        int[] result = DangGu.solution(10, 10, 5, 9, ex);
         System.out.println(Arrays.toString(result));
     }
 }
