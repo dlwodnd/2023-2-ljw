@@ -1,4 +1,4 @@
-package com.green.day29.normal2;
+package com.green.day29.ioc;
 
 import com.green.day29.Speaker;
 import com.green.day29.Woofer;
@@ -6,8 +6,8 @@ import com.green.day29.Woofer;
 public class HamanSpeaker implements Speaker {
     private Woofer woofer;
 
-    public HamanSpeaker(){
-        woofer = new HanilWoofer();
+    public HamanSpeaker(Woofer woofer){
+        this.woofer = woofer;
     }
 
     public void sound(){
